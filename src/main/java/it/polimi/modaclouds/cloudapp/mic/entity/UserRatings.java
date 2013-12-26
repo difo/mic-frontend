@@ -22,15 +22,16 @@ package it.polimi.modaclouds.cloudapp.mic.entity;
 
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
+import javax.persistence.Table;
 
 @SuppressWarnings("serial")
-@Entity(name = "UserRatings")
+@Entity
+@Table(name = "UserRatings")
 @NamedQuery(name="UserRatingsQuery",query="SELECT u FROM UserRatings u")
 public class UserRatings implements Serializable{
 
@@ -77,7 +78,7 @@ public class UserRatings implements Serializable{
 	public List<String> getRatings() {
 		return ratings;
 	}
-	public void setRatings(ArrayList<String> ratings) {
+	public void setRatings(List<String> ratings) {
 		this.ratings = ratings;
 	}
 	public String getTodelete() {

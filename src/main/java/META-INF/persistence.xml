@@ -20,9 +20,17 @@
   -->
 
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
-<persistence-unit name="MyPersistenceUnit">
-<properties>
-<property name="entity.package" value="it.polimi.modaclouds.cloudapp.mic.entity"/>
-</properties>
+<persistence-unit name="MyPersistenceUnit" transaction-type="JTA">
+	<jta-data-source>YOUR-SOURCE-IN-GLASSFISH</jta-data-source>
+	<exclude-unlisted-classes>false</exclude-unlisted-classes>
+	<class>it.polimi.modaclouds.cloudapp.mic.entity.Topic</class>
+	<class>it.polimi.modaclouds.cloudapp.mic.entity.UserRatings</class>
+	<properties>
+		<property name="eclipselink.dll-generation" value="drop-and-create-tables"/>
+		<property name="javax.persistence.jdbc.url"
+                 value="THE-URL-OF-YOUR-DATABASE"/>
+       <property name="javax.persistence.jdbc.user" value="USER-FOR-DATABASE"/>
+       <property name="javax.persistence.jdbc.password" value="PASSWORD-FOR-DATABASE"/>
+	</properties>
 </persistence-unit>
 </persistence>

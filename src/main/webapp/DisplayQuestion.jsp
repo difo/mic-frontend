@@ -64,7 +64,7 @@
 							@SuppressWarnings("unchecked")
 							List<Topic> listOfTopics = (List<Topic>) em
 									.createQuery(
-											"SELECT t FROM Topic t WHERE topicName=:topicName")
+											"SELECT t FROM Topic t WHERE t.topicName=:topicName")
 									.setParameter("topicName", actualTopic)
 									.getResultList();
 							

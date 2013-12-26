@@ -20,16 +20,17 @@
   -->
 
 <configurations>
-<vendor>Amazon</vendor>
+<vendor>Glassfish</vendor>
 <services>
 <sql>
-<connection string="jdbc:mysql://micdb.cwsx7ksu6s4l.eu-west-1.rds.amazonaws.com:3306/micdb"/>
+<connection string="THE-CONNECTION-STRING-TO-YOUR-DATABASE"/>
+<blobconnection string="THE-CONNECTION-STRING-TO-YOUR-BLOB-DATABASE"/>
 </sql>
-<memcache>
-<host address="miccachecluster.yzppy6.0001.euw1.cache.amazonaws.com" port="11211"/>
-</memcache>
 <mail>
-<account_info username="marco.miglierina@icloud.com"/>
+<account_info username="YOUR-EMAIL" password="YOUR-EMAIL-PASSWORD"/>/>
 </mail>
+<memcache>
+<host address="127.0.0.1" port="11211"/>
+</memcache>
 </services>
 </configurations>

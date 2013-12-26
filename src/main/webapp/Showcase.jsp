@@ -8,7 +8,7 @@
   you may not use this file except in compliance with the License.
   You may obtain a copy of the License at
   
-       http://www.apache.org/licenses/LICENSE-2.0
+       http://www.apache.org/licenses/LICENSE-2.0s
   
   Unless required by applicable law or agreed to in writing, software
   distributed under the License is distributed on an "AS IS" BASIS,
@@ -145,8 +145,8 @@ if(request.getParameter("refresh")!=null)
 				    {
 					
 				 	CloudEntityManager em = mf.getEntityManagerFactory().createCloudEntityManager();
-					List<UserRatings> ratings =em.createQuery("SELECT ur FROM UserRatings ur WHERE email=:email")
-							.setParameter("email", usermail).getResultList();
+					List<UserRatings> ratings =em.createQuery("SELECT ur FROM UserRatings ur  WHERE ur.email=:mail")
+							.setParameter("mail", usermail).getResultList();
 					
 					
 					for (UserRatings ur : ratings) {
@@ -169,7 +169,7 @@ if(request.getParameter("refresh")!=null)
 				<%
 					Connection c = mf.getSQLService().getConnection();
 					Statement statement = c.createStatement();
-					String stm2 = "SELECT Email,FirstName,LastName,Picture FROM UserProfile WHERE Email='"
+					String stm2 = "SELECT Email,FirstName,LastName,Picture FROM UserProfile  WHERE Email='"
 							+ usermail + "'";
 					String myPicture = null;
 					String myFirstName = null;

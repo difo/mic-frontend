@@ -21,25 +21,28 @@ package it.polimi.modaclouds.cloudapp.mic.entity;
  */
 
 
-import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 
-@Entity(name = "Topic")
+@Entity
+@Table(name = "Topic")
 public class Topic {
 	
 	@Id
 	private String topicName;
 	
-	private ArrayList<String> topicQuestions;
+
+	private List<String> topicQuestions;
 	
 	public Topic() {
 		
 	}
 	
-	public Topic(String topicName, ArrayList<String> topicQuestions) {
+	public Topic(String topicName, List<String> topicQuestions) {
 		super();
 		this.topicName = topicName;
 		this.topicQuestions = topicQuestions;
@@ -52,10 +55,10 @@ public class Topic {
 	public void setTopicName(String topicName) {
 		this.topicName = topicName;
 	}
-	public ArrayList<String> getTopicQuestions() {
+	public List<String> getTopicQuestions() {
 		return topicQuestions;
 	}
-	public void setTopicQuestions(ArrayList<String> topicQuestions) {
+	public void setTopicQuestions(List<String> topicQuestions) {
 		this.topicQuestions = topicQuestions;
 	}
 	
