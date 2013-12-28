@@ -24,10 +24,12 @@ package it.polimi.modaclouds.cloudapp.mic.entity;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+
 
 @SuppressWarnings("serial")
 @Entity
@@ -37,10 +39,14 @@ public class UserRatings implements Serializable{
 
 	@Id
 	private String id;
+	
 	private String email;
+	
 	private String topicName;
 	
 	private List<String> ratings;
+	
+	
 	//private Map<Integer, Integer> ratings;
 	private String todelete;
 

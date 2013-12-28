@@ -19,18 +19,21 @@
   *****************************
   -->
 
-<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
-<persistence-unit name="MyPersistenceUnit" transaction-type="JTA">
+<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"><persistence-unit name="MyPersistenceUnit" transaction-type="JTA">
+	<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider> 
 	<jta-data-source>YOUR-SOURCE-IN-GLASSFISH</jta-data-source>
-	<exclude-unlisted-classes>false</exclude-unlisted-classes>
 	<class>it.polimi.modaclouds.cloudapp.mic.entity.Topic</class>
 	<class>it.polimi.modaclouds.cloudapp.mic.entity.UserRatings</class>
+	<exclude-unlisted-classes>false</exclude-unlisted-classes>
 	<properties>
-		<property name="eclipselink.dll-generation" value="drop-and-create-tables"/>
-		<property name="javax.persistence.jdbc.url"
-                 value="THE-URL-OF-YOUR-DATABASE"/>
-       <property name="javax.persistence.jdbc.user" value="USER-FOR-DATABASE"/>
-       <property name="javax.persistence.jdbc.password" value="PASSWORD-FOR-DATABASE"/>
+      <property name="javax.persistence.jdbc.password" value="DATABASE-USER"/>
+		<property name="javax.persistence.jdbc.user" value="DATABASE-PASSWROD"/>
+		<property name="javax.persistence.driver" value="com.mysql.jdbc.Driver"/>
+		<property name="javax.persistence.url" value="DATABASE-CONNECTION"/>
+		<property name="eclipselink.ddl-generation" value="create-tables"/>
+		<property name="eclipselink.logging.level" value="INFO"/>
 	</properties>
 </persistence-unit>
 </persistence>

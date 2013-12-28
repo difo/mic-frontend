@@ -24,8 +24,11 @@ package it.polimi.modaclouds.cloudapp.mic.entity;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Column;
 
 
 @Entity
@@ -33,9 +36,12 @@ import javax.persistence.Table;
 public class Topic {
 	
 	@Id
+	/*
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="topicName")
+	*/
 	private String topicName;
 	
-
 	private List<String> topicQuestions;
 	
 	public Topic() {

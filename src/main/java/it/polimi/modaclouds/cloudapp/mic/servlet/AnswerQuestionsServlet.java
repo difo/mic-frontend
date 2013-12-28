@@ -107,7 +107,7 @@ public class AnswerQuestionsServlet extends HttpServlet {
 			@SuppressWarnings("unchecked")
 			List<UserRatings> oldRatings = em
 					.createQuery(
-							"SELECT ur FROM UserRatings ur WHERE email=:email")
+							"SELECT ur FROM UserRatings ur WHERE ur.email=:email")
 					.setParameter("email",usermail).getResultList();
 			
 			CloudMemcache mc= mf.getCloudMemcache();
