@@ -20,7 +20,7 @@ public class ComputeSimilarity {
 		System.out.println("compute");
 		boolean edit=new Boolean(editS);
 		@SuppressWarnings("unchecked")
-		List<UserRatings> ratings =mf.getEntityManagerFactory().createCloudEntityManager().createQuery("SELECT ur FROM UserRatings ur WHERE email=:email").setParameter("email", usermail).getResultList();
+		List<UserRatings> ratings =mf.getEntityManagerFactory().createCloudEntityManager().createQuery("SELECT ur FROM UserRatings ur WHERE ur.email=:email").setParameter("email", usermail).getResultList();
 		String topicName = null;
 		for (UserRatings myRatings : ratings) {
 			initRanking();
@@ -30,7 +30,7 @@ public class ComputeSimilarity {
 					.getEntityManagerFactory()
 					.createCloudEntityManager()
 					.createQuery(
-							"SELECT ur FROM UserRatings ur WHERE topicName=:topic")
+							"SELECT ur FROM UserRatings ur WHERE ur.topicName=:topic")
 					.setParameter("topic", topicName).getResultList();
 
 			

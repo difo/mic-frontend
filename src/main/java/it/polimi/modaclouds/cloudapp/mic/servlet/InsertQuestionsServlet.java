@@ -28,6 +28,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Logger;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+import javax.persistence.PersistenceContext;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -36,7 +41,8 @@ import javax.servlet.http.HttpServletResponse;
 
 public class InsertQuestionsServlet extends HttpServlet {
 	private static final long serialVersionUID = 5909797442154638761L;
-
+	
+	
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */

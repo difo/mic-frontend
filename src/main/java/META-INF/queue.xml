@@ -23,6 +23,6 @@
 <queue>
 <name>queuetask</name>
 <mode>PUSH</mode>
-<rate>5/s</rate>
+<rate>1/s</rate>
 </queue>
 </queue-entries>

@@ -164,7 +164,25 @@
     <servlet-name>DeleteUR</servlet-name>
     <url-pattern>/DeleteUR</url-pattern>
   </servlet-mapping>
+  <servlet>
+	<display-name>GlassfishQueueServlet</display-name>
+	<servlet-name>GlassfishQueueServlet</servlet-name>
+	<servlet-class>it.polimi.modaclouds.cpimlibrary.taskqueuemng.GlassfishQueueServlet</servlet-class>
+	<load-on-startup>1</load-on-startup>
+  </servlet>
   <welcome-file-list>
     <welcome-file>Home.jsp</welcome-file>
   </welcome-file-list>
+  <!-- servlet che crea errore nel deploy del backend perche non viene trovata -->
+	<!--  
+	<servlet>
+		<display-name>AmazonQueueServlet</display-name>
+		<servlet-name>AmazonQueueServlet</servlet-name>
+		<servlet-class>com.cloud.taskqueuemng.AmazonQueueServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+  -->
+  	 <!-- tag necessario per utilizzare il couchbase manager su glassfish in modo da s
+	 supportare l implementazione del protocollo memcached con spymemcached	 -->
+	 <!-- > <distributable/>-->
 </web-app>

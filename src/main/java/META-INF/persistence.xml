@@ -34,6 +34,8 @@ xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/x
 		<property name="javax.persistence.url" value="DATABASE-CONNECTION"/>
 		<property name="eclipselink.ddl-generation" value="create-tables"/>
 		<property name="eclipselink.logging.level" value="INFO"/>
+			<property name="account.name" value="DATABASE-USER"/>
+		<property name="account.key" value="DATABASE-PASSWORD"/>
 	</properties>
 </persistence-unit>
 </persistence>
