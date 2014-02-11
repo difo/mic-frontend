@@ -35,7 +35,7 @@ public class ComputeSimilarityServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		
-		System.out.println("eccomi");
+		System.out.println("eccomi dal frontend");
 		String usermail = req.getParameter("user");
 		String edit = req.getParameter("edit");
 		System.out.println("user = " + usermail + " edit = " + edit);
@@ -47,7 +47,7 @@ public class ComputeSimilarityServlet extends HttpServlet {
 	public void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		
-		System.out.println("eccomi");
+		System.out.println("eccomi dal frontend");
 		String usermail = req.getParameter("user");
 		String edit = req.getParameter("edit");
 		System.out.println("user = " + usermail + " edit = " + edit);
