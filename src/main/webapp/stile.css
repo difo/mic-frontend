@@ -1,313 +1,605 @@
-/*
- * *****************************
- * mic
- * *****************************
- * Copyright (C) 2013 deib-polimi
- * *****************************
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * 
- *      http://www.apache.org/licenses/LICENSE-2.0
- * 
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * *****************************
+/**
+ * Copyright 2013 deib-polimi
+ * Contact: deib-polimi <marco.miglierina@polimi.it>
+ *
+ *    Licensed under the Apache License, Version 2.0 (the "License");
+ *    you may not use this file except in compliance with the License.
+ *    You may obtain a copy of the License at
+ *
+ *        http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *    Unless required by applicable law or agreed to in writing, software
+ *    distributed under the License is distributed on an "AS IS" BASIS,
+ *    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *    See the License for the specific language governing permissions and
+ *    limitations under the License.
  */
+
 @charset "utf-8";
+
 body{
+
 	background-image: url(image/MiC.jpg);
+
 	background-position:center;
+
 	background-repeat:no-repeat;
+
 }
+
 select{
+
 	background:white;
+
 	border-style:none;
+
 	box-shadow: insert 0 0 6px black;
+
 	}
+
+
 
 #content #subcontent #corpo {
+
 	margin: auto;
+
 	padding-top:20px;
+
 	width:1210px;
+
 	min-height:600px;
+
 	
+
 	color:#FFF;
+
 	
+
 }
+
 #content #subcontent #corpo #header{
+
 	width:400px;
+
 	position:absolute;
+
 	top:290px;
+
 	left:240px;
+
 }
+
 #content #subcontent #corpo #headerQUESTION{
+
 	width:500px;
+
 	position:absolute;
+
 	top:290px;
+
 	left:180px;
+
 }
+
+
 
 #content #subcontent #corpo #topicheader{
+
 	width:500px;
+
 	position:absolute;
+
 	top:290px;
+
 	left:200px;
+
 }
+
 #content #subcontent #corpo #titlepost{
+
 	width:420px;
+
 	position:absolute;
+
 	top:290px;
+
 	left:170px;
+
 }
+
+
 
 img.miniature{
+
 	width:32px;
+
 	height:32px;
+
 	border-radius:5px;
+
 	}
+
 #topic{
+
 	width:100px;
+
 	position:absolute;
+
 	top:320px;
+
 	left:170px;
+
 	z-index:1;
+
 	border-radius:5px;
+
 	}
+
 	
+
 #newpost{
+
 	resize:none;
+
 	}
+
 #questions::-webkit-scrollbar {
+
     height: 12px;
+
 	width: 12px;
+
 	background: trasparent;
+
 	-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.5); 
+
 	border-radius:1ex;
+
     }
+
 #questions::-webkit-scrollbar-thumb {
+
     background:white;
+
     width:10px;
+
     -webkit-border-radius: 1ex;
+
     -webkit-box-shadow: inset 0 0 3px black; 
-}
-#questions::-webkit-scrollbar-corner {
-    background: white;
-    -webkit-border-radius:1ex;
-}
-#content #subcontent #corpo #sx #header{
-	width:400px;
-	position:absolute;
-	top:290px;
-	left:240px;
-}
-#content #subcontent #corpo #dx #header{
-	width:400px;
-	position:absolute;
-	top:290px;
-	left:640px;
+
 }
 
+#questions::-webkit-scrollbar-corner {
+
+    background: white;
+
+    -webkit-border-radius:1ex;
+
+}
+
+#content #subcontent #corpo #sx #header{
+
+	width:400px;
+
+	position:absolute;
+
+	top:290px;
+
+	left:240px;
+
+}
+
+#content #subcontent #corpo #dx #header{
+
+	width:400px;
+
+	position:absolute;
+
+	top:290px;
+
+	left:640px;
+
+}
+
+
+
 #tasto{
+
 	clear:both;
+
 }
+
 #first{
+
 	float:left;
+
 	padding-right:20px;
+
 }
+
+
 
 #label{
 
+
+
 }
+
+
 
 #content #messaggio{
+
 	margin:auto;
+
 	margin-top:20px;
+
 	width:450px;
+
 	position:absolute;
+
 	top:340px;
+
 	left:695px;
+
 	color:#FFF;
+
 	font-size:20px;
+
 	border-style:groove;
+
 	border-color:#FFF;
+
 	border-radius:10px;
+
 	text-align:center;
+
 	}
 
+
+
 #content #subcontent #corpo #form {
+
 	margin:auto;
+
 	position:absolute;
+
 	top:335px;
+
 	left:154px;
+
 	width: 520px;
+
 }
+
 #content #subcontent #corpo #login {
+
 	margin:auto;
+
 	position:absolute;
+
 	top:335px;
+
 	left:254px;
+
 	width: 300px;
+
 }
+
+
+
 
 
 #content #subcontent #corpo #domanda{
+
 	padding-left:30px;
+
 	font-size:20px;
+
 	font-weight:bold;
+
 	width:300px;
+
 	float:left;
+
 }
 
+
+
 #content #subcontent #corpo #sx #messaggioBacheca{
+
 	padding-left:10px;
+
 	padding-right:10px;
+
 	padding-top:5px;
+
 	margin-top:5px;
+
 	padding-bottom:5px;
+
 	background:white;
+
 	border-radius:5px;
+
 	font-size:13px;
+
 	color:black;
+
 	width:400px;
+
 	
+
 	float:left;
+
 }
+
+
+
 
 
 #content #subcontent #corpo #dx #favorites{
+
 	padding-left:30px;
+
 	font-size:14px;
+
 	width:300px;
+
 	float:left;
+
 }
+
+
 
 #content #subcontent #corpo #questions{
+
 	width:450px;
+
 	height:200px;
+
 	overflow:auto;
+
 	position:absolute;
+
 	top:360px;
+
 	left:170px;
+
 	
+
 }
+
 #count {
+
 	width:25px;
+
 	background: transparent;
+
 	border:none;
+
 	color:white;
+
 	}
+
+
 
 #content #subcontent #corpo #postarea{
+
 	width:450px;
+
 	height:250px;
+
 	overflow:auto;
+
 	position:absolute;
+
 	
+
 	top:360px;
+
 	left:170px;
+
 	
+
 }
+
 html{
+
 	scrollbar-base-color:black;
+
 	}
+
 #content #subcontent #corpo #sx #questions{
+
 	width:450px;
+
 	height:200px;
+
 	
+
 	
+
 	overflow:auto;
+
 	position:absolute;
+
 	top:360px;
+
 	left:170px;
+
 	border-radius:10px;
+
 	
+
 }
+
+
 
 #content #subcontent #corpo #dx #questions{
+
 	width:400px;
+
 	height:170px;
+
 	overflow:auto;
+
 	position:absolute;
+
 	top:360px;
+
 	left:700px;
+
 	
+
 }
+
+
 
 #content #subcontent #corpo #submit{
+
 	margin:auto;
+
 	margin-top:20px;
+
 	font-size: 18px;
+
 	text-align: center;
+
 }
+
 #tabFav td{
+
 	padding: 5px 10px 5px 10px;
+
 	vertical-align: middle;
+
 	}
+
 #write{
+
 	margin:auto;
+
 	margin-top:20px;
+
 	width:100px;
+
 	position:absolute;
+
 	top:370px;
+
 	left:1075px;
+
 	
+
 	font-size: 18px;
+
 	text-align: center;
+
 }
+
 #esterno{
+
 	max-width:300px;
+
 	float:right;
+
 	color:black;
+
 	position:absolute;
+
 	top:100px;
+
 	right:10px;
+
 	}
+
+
 
 img.myPic{
+
 	
+
 	height: 50px;
+
 	width: 50px;
+
 	border-radius:8px;
+
 	margin-left: 20px;
+
 }
+
+
 
 #checkarea{
+
 	width:250px;
+
 	position:absolute;
+
 	top:320px;
+
 	left:650px;
+
 	}
+
+
 
 #content #subcontent #corpo #meet{
+
 	margin:auto;
+
 	margin-top:20px;
+
 	width:100px;
+
 	position:absolute;
+
 	top:370px;
+
 	left:775px;
+
 	
+
 	font-size: 18px;
+
 	text-align: center;
-}
-#content #subcontent #corpo #send{
-	margin:auto;
-	margin-top:20px;
-	width:100px;
-	position:absolute;
-	top:370px;
-	left:925px;
+
 }
 
-#fileDiv{
-	position: absolute;
-	top: 140px;
-	left:265px;
-	}
-#content #subcontent #corpo #form h1{
-	color:#FFF;
-	text-align: center;
+#content #subcontent #corpo #send{
+
+	margin:auto;
+
+	margin-top:20px;
+
+	width:100px;
+
+	position:absolute;
+
+	top:370px;
+
+	left:925px;
+
 }
+
+
+
+#fileDiv{
+
+	position: absolute;
+
+	top: 140px;
+
+	left:265px;
+
+	}
+
+#content #subcontent #corpo #form h1{
+
+	color:#FFF;
+
+	text-align: center;
+
+}
+
