@@ -3,7 +3,7 @@
 .project
 .DS_Store
 /target
-/configuration.xml
-/persistence.xml
-/queue.xml
+/src/main/java/META-INF/configuration.xml
+/src/main/java/META-INF/persistence.xml
+/src/main/java/META-INF/queue.xml
 
