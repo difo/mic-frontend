@@ -19,7 +19,6 @@ package it.polimi.modaclouds.cloudapp.mic.servlet;
 
 
 import it.polimi.modaclouds.cpimlibrary.mffactory.MF;
-import it.polimi.modaclouds.monitoring.MonitoredMetric;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -85,7 +84,6 @@ public class LoginServlet extends HttpServlet {
 	 *      response)
 
 	 */
-	@MonitoredMetric("response-time")
 	protected void doPost(HttpServletRequest request,
 
 			HttpServletResponse response) throws ServletException, IOException {
