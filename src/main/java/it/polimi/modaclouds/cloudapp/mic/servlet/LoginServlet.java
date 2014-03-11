@@ -90,8 +90,6 @@ public class LoginServlet extends HttpServlet {
 
 			HttpServletResponse response) throws ServletException, IOException {
 
-
-
 		try {
 
 			request.setCharacterEncoding("UTF-8");
