@@ -1,4 +1,4 @@
-mic-backend
+mic-frontend
 ===========
 
 With the aim to use and test all the services from the CPIM library , it is developed a sample application , called Meeting In The Cloud ( MiC ), a small social network .
