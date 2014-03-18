@@ -37,9 +37,13 @@ https://github.com/deib-polimi/cpim-library
 Here we will just give a compact "how to" in order to configure the architecture and the CPIM meta-files for the deploy of MiC  on each cloud provider supported by the CPIM.
 
 LOCAL DEPLOYMENT ON GLASSFISH
+============
+
 First of all, since the CPIM library support the deploy interfacing with Glassfish AS we will speak about how to setting up the local architecture and how to fill the meta-files for MiC deployed on Glassfish. Since the Glassfish extension of the CPIM was though  to support a local deploy using the CPIM, we will focus on this case, but what we will say can be easily generalized.
 
 SETTING UP THE ARCHITECTURE
+============
+
 
 -provide the java jdk 1.7 installed
 -download and install Glassfish 4 AS
@@ -55,12 +59,14 @@ if you are running under Mac OSX refer to the instruction on how to get a memcac
 
 http://www.journaldev.com/1/how-to-install-memcached-server-on-mac-oslinux
 
--configure Glassfish in order to work with the memcached server  following the instruction at the following link (skip the phase of adding a glass fish-web.xml file and of adding spymemcached library to Glassfish modules):
+-configure Glassfish in order to work with the memcached server  following the instruction at the following link (skip the phase of adding a glass fish-web.xml file and of adding spymemcached library to Glassfish modules since it is already imported by the CPIM):
 
 https://github.com/rickyepoderi/couchbase-manager/wiki/Installation
 
 
 META-FILES CONFIGURATION
+============
+
 
 Refer to the "templates"->"Glassfish meta-files" folder to find specific templates for the deployment of MiC using Glassfish AS. You just need to provide the following additional information:
 
