@@ -21,9 +21,9 @@ MiC uses the CPIM to access the following services:
 
 ¥ Blob Service: to save the profile picture of the user.
 
-¥ NoSQL Service: in this storage solution the are all the topics, questions and associated answers given by all the users to it.
+¥ NoSQL Service: with this storage solution MiC stores all the topics, the relative  questions choosen by a single user, and the given answers (a rate from 1 to 5).
 
-¥ SQL Service : the relational database stores the anagraphics users , and as well as all tuples needed to keep track of each user's Best Contacts .
+¥ SQL Service : with this service MiC stores in the relational database the anagraphics users ,all tuples needed to keep track of each user's Best Contacts  (user similarity table), and the messages written by a user about a specific topic.
 
 ¥ Memcache Service: Memcache service , allows the application to save some data during normal navigation of a user. Specifically, the data  about the Best Contacts of a logged User, to avoid having to always take them from the classics storage systems. Using this type of memory , the velocity of access to this information is greatly enhanced.
 
@@ -36,12 +36,12 @@ https://github.com/deib-polimi/cpim-library
 
 Here we will just give a compact "how to" in order to configure the architecture and the CPIM meta-files for the deploy of MiC  on each cloud provider supported by the CPIM.
 
-LOCAL DEPLOYMENT ON GLASSFISH
+Local Deployment on Glassfish
 ============
 
 First of all, since the CPIM library support the deploy interfacing with Glassfish AS we will speak about how to setting up the local architecture and how to fill the meta-files for MiC deployed on Glassfish. Since the Glassfish extension of the CPIM was though  to support a local deploy using the CPIM, we will focus on this case, but what we will say can be easily generalized.
 
-SETTING UP THE ARCHITECTURE
+Setting Up the Architecture
 ============
 
 
@@ -64,15 +64,15 @@ http://www.journaldev.com/1/how-to-install-memcached-server-on-mac-oslinux
 https://github.com/rickyepoderi/couchbase-manager/wiki/Installation
 
 
-META-FILES CONFIGURATION
+META-FILES Configuration
 ============
 
 
-Refer to the "templates"->"Glassfish meta-files" folder to find specific templates for the deployment of MiC using Glassfish AS. You just need to provide the following additional information:
+Refer to the templates/Glassfish_meta-files folder to find specific templates for the deployment of MiC using Glassfish AS. You just need to provide the following additional information:
 
 -<connection> and <blobconnection> fields in the configuraton.xml file: you have to fill with the connection strings given by Glassfish at the moment you create the two JDBC connection pool
 
--persistence.xml: you have to complete with account credential relative to the MySQL user  granted of privileges on the Table database, the url to the Table database on MySQL sever and  the JNDI name associated to the JDBC resource you have create on Glassfish
+-persistence.xml: you have to complete with account credential relative to the MySQL user  granted of privileges on the databases, the url to the relational database on MySQL sever and  the JNDI name associated to the JDBC resource you have created on Glassfish for the relational database.
 
--<backend> field of the configuration.xml: you have to fill  with the local url to the backend. If you are using a single instance just specify the local url to the fronted itself. Otherwise if you are running with two instance specify the local url to the backend.
+-<backend> field of the configuration.xml:  if you are using a single instance just specify the local url to the fronted itself. Otherwise if you are running with two instance specify the local url to the backend.
 
