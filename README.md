@@ -45,23 +45,26 @@ Setting Up the Architecture
 ============
 
 
--provide the java jdk 1.7 installed
--download and install Glassfish 4 AS
--download and install MySQL 5.6.15 server (or most recent version)
--using MySQL create two database, one for the Blob service and one for the Table service
--using the glassfish admin console create two JDBC connection toward the two databases created
--create a JDBC resource with a JDNI name for the connection reserved for the Table service database
--download and run memcached server 1.4.4 at the following link: 
+\begin{itemize}
+\item provide the java jdk 1.7 installed
+\item download and install Glassfish 4 AS
+\item download and install MySQL 5.6.15 server (or most recent version)
+\item using MySQL create two database, one for the Blob service and one for the Table service
+\item using the glassfish admin console create two JDBC connection toward the two databases created
+\item create a JDBC resource with a JDNI name for the connection reserved for the Table service database
+\item download and run memcached server 1.4.4 at the following link: 
 
-http://s3.amazonaws.com/downloads.northscale.com/memcached-win64-1.4.4-14.zip
+	http://s3.amazonaws.com/downloads.northscale.com/memcached-win64-1.4.4-14.zip
 
-if you are running under Mac OSX refer to the instruction on how to get a memcached server at the following link:
+	if you are running under Mac OSX refer to the instruction on how to get a memcached server at the following link:
 
-http://www.journaldev.com/1/how-to-install-memcached-server-on-mac-oslinux
+	http://www.journaldev.com/1/how-to-install-memcached-server-on-mac-oslinux
 
--configure Glassfish in order to work with the memcached server  following the instruction at the following link (skip the phase of adding a glass fish-web.xml file and of adding spymemcached library to Glassfish modules since it is already imported by the CPIM):
+\item configure Glassfish in order to work with the memcached server  following the instruction at the following link (skip the phase of adding a glass fish-web.xml file and of adding spymemcached library to Glassfish modules since it is already imported by the CPIM):
 
 https://github.com/rickyepoderi/couchbase-manager/wiki/Installation
+\end{itemize}
+
 
 
 META-FILES Configuration
