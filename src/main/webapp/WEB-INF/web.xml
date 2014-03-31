@@ -180,7 +180,5 @@
 		<load-on-startup>1</load-on-startup>
 	</servlet>
   -->
-  	 <!-- tag necessario per utilizzare il couchbase manager su glassfish in modo da s
-	 supportare l implementazione del protocollo memcached con spymemcached	 -->
-	 <!-- > <distributable/>-->
+
 </web-app>

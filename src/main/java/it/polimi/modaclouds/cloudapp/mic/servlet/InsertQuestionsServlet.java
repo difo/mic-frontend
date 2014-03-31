@@ -21,16 +21,12 @@ package it.polimi.modaclouds.cloudapp.mic.servlet;
 
 
 import it.polimi.modaclouds.cloudapp.mic.entity.Topic;
-
 import it.polimi.modaclouds.cpimlibrary.mffactory.MF;
 
-
 import java.io.IOException;
-
 import java.util.ArrayList;
-
+import java.util.List;
 import java.util.logging.Logger;
-
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -38,13 +34,9 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.persistence.PersistenceContext;
 import javax.servlet.RequestDispatcher;
-
 import javax.servlet.ServletException;
-
 import javax.servlet.http.HttpServlet;
-
 import javax.servlet.http.HttpServletRequest;
-
 import javax.servlet.http.HttpServletResponse;
 
 
@@ -109,7 +101,7 @@ public class InsertQuestionsServlet extends HttpServlet {
 
 		l.info("Manager Factory loaded.");
 
-		ArrayList<String> reading=new ArrayList<String>();
+		List<String> reading=new ArrayList<String>();
 
 		reading.add("How much do you love reading?");
 
@@ -137,7 +129,7 @@ public class InsertQuestionsServlet extends HttpServlet {
 
 			
 
-		ArrayList<String> cinema=new ArrayList<String>();
+		List<String> cinema=new ArrayList<String>();
 
 		cinema.add("How much do you love movies?");
 
@@ -165,7 +157,7 @@ public class InsertQuestionsServlet extends HttpServlet {
 
 		
 
-		ArrayList<String> sport=new ArrayList<String>();
+		List<String> sport=new ArrayList<String>();
 
 		sport.add("How much do you love practice sports?");
 
@@ -193,7 +185,7 @@ public class InsertQuestionsServlet extends HttpServlet {
 
 				
 
-		ArrayList<String> technology=new ArrayList<String>();
+		List<String> technology=new ArrayList<String>();
 
 		technology.add("How much do you love technology?");
 
@@ -221,7 +213,7 @@ public class InsertQuestionsServlet extends HttpServlet {
 
 				
 
-		ArrayList<String> love=new ArrayList<String>();
+		List<String> love=new ArrayList<String>();
 
 		love.add("How much do you feel a complete person next to your partner?");
 
@@ -249,7 +241,7 @@ public class InsertQuestionsServlet extends HttpServlet {
 
 		
 
-		ArrayList<String> music=new ArrayList<String>();
+		List<String> music=new ArrayList<String>();
 
 		music.add("How much do you love music?");
 
@@ -277,7 +269,7 @@ public class InsertQuestionsServlet extends HttpServlet {
 
 		                                                                                                                  
 
-		ArrayList<String> politcs=new ArrayList<String>();
+		List<String> politcs=new ArrayList<String>();
 
 		politcs.add("How much is important for you to participate actively in politics??? [1-never][2-seldom][3- occasionally][4-often][5-always]");
 
