@@ -72,11 +72,11 @@ META-FILES Configuration
 
 Refer to the "templates/Glassfish meta-files" folder to find specific templates for the deployment of MiC using Glassfish AS. You just need to provide the following additional information:
 
-- <connection> and <blobconnection> fields in the configuraton.xml file: you have to fill with the name of the two corrispondent database you have create on MySQL;
+- < connection> and < blobconnection > fields in the configuraton.xml file: you have to fill with the name of the two corrispondent database you have create on MySQL;
 
 - persistence.xml: you have to complete with account credential relative to the MySQL user granted of privileges on the databases, the url to the relational database on MySQL sever and  the JNDI name associated to the JDBC resource you have created on Glassfish for the main database;
 
-- <backend> field of the configuration.xml:  if you are using a single instance just specify the local url to the fronted itself. Otherwise if you are running with two instance specify the local url to the backend.
+- < backend > field of the configuration.xml:  if you are using a single instance just specify the local url to the fronted itself. Otherwise if you are running with two instance specify the local url to the backend.
 
 How to Deploy
 ============
