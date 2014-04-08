@@ -134,22 +134,22 @@ META-FILES Configuration
 ============
 Refer to the "templates/Azure meta-files" folder to find specific templates for the deployment of MiC using Windows Azure. You just need to provide some information as specified in the templates. In particular:
 
-1. configuration.xml: SQL service and Memcached service need to be configured;
+-configuration.xml: SQL service and Memcached service need to be configured;
 
-- go on the Management Portal;
-- on the left scroll panel click on "SQL DATABASE";
-- find your listed SQL database and click on it;
-- click on "View SQL Database connection strings for ADO .Net, ODBC, PHP, and JDBC";
-- copy and pasta the JDBC conncection string in the configuration.xml where specified in the template;
-- specify the address to the memcache server you have created. In order to do this you just need to complete the schema "localhost_<WorkerRoleName>" as specified in the template;
+	- go on the Management Portal;
+	- on the left scroll panel click on "SQL DATABASE";
+	- find your listed SQL database and click on it;
+	- click on "View SQL Database connection strings for ADO .Net, ODBC, PHP, and JDBC";
+	- copy and pasta the JDBC conncection string in the configuration.xml where specified in the template;
+	- specify the address to the memcache server you have created. In order to do this you just need to complete the schema "localhost_<WorkerRoleName>" as specified in the template;
 
-2. persistence.xml: just provide the credentials for the storage account as specified in the templates
+- persistence.xml: just provide the credentials for the storage account as specified in the templates
 
-- go on the Management Portal;
-- on the left scroll panel click on "STORAGE";
-- find your listed Storage Account and click on it;
-- at the bottom of the page click on "MANAGE ACCESS KEY";
-- copy and paste the STORAGE ACCOUNT NAME and the PRIMARY ACCESS KEY in the persistence.xml where specified in the template;
+	- go on the Management Portal;
+	- on the left scroll panel click on "STORAGE";
+	- find your listed Storage Account and click on it;
+	- at the bottom of the page click on "MANAGE ACCESS KEY";
+	- copy and paste the STORAGE ACCOUNT NAME and the PRIMARY ACCESS KEY in the persistence.xml where specified in the template;
 	
 	
 	
