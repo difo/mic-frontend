@@ -136,20 +136,20 @@ Refer to the "templates/Azure meta-files" folder to find specific templates for 
 
 1. configuration.xml: SQL service and Memcached service need to be configured;
 
-	-go on the Management Portal;
-	-on the left scroll panel click on "SQL DATABASE";
-	-find your listed SQL database and click on it;
-	-click on "View SQL Database connection strings for ADO .Net, ODBC, PHP, and JDBC";
-	-copy and pasta the JDBC conncection string in the configuration.xml where specified in the template;
-	-specify the address to the memcache server you have created. In order to do this you just need to complete the schema "localhost_<WorkerRoleName>" as specified in the template;
+- go on the Management Portal;
+- on the left scroll panel click on "SQL DATABASE";
+- find your listed SQL database and click on it;
+- click on "View SQL Database connection strings for ADO .Net, ODBC, PHP, and JDBC";
+- copy and pasta the JDBC conncection string in the configuration.xml where specified in the template;
+- specify the address to the memcache server you have created. In order to do this you just need to complete the schema "localhost_<WorkerRoleName>" as specified in the template;
 
 2. persistence.xml: just provide the credentials for the storage account as specified in the templates
 
-	-go on the Management Portal;
-	-on the left scroll panel click on "STORAGE";
-	-find your listed Storage Account and click on it;
-	-at the bottom of the page click on "MANAGE ACCESS KEY";
-	-copy and paste the STORAGE ACCOUNT NAME and the PRIMARY ACCESS KEY in the persistence.xml where specified in the template;
+- go on the Management Portal;
+- on the left scroll panel click on "STORAGE";
+- find your listed Storage Account and click on it;
+- at the bottom of the page click on "MANAGE ACCESS KEY";
+- copy and paste the STORAGE ACCOUNT NAME and the PRIMARY ACCESS KEY in the persistence.xml where specified in the template;
 	
 	
 	
@@ -159,8 +159,8 @@ Refer to the "templates/Azure meta-files" folder to find specific templates for 
 Furthermore deployment on Windows Azure required two more meta-files specific for this deployment solution. These are the servicedefinition.csdef 
 and the serviceconfiguration.cscfg. Also for these two additional meta-files we provide a templates in the relative folder missing of the following information:
 
-	-servicedefinition.csdef: specify the endpoint of the Memcached Server you have create on the portal as you specified at the creation time;
-	-serviceconfiguration.cscfg: specify the credentials for the Storage Account as you did for the persistence.xml;
+	- servicedefinition.csdef: specify the endpoint of the Memcached Server you have create on the portal as you specified at the creation time;
+	- serviceconfiguration.cscfg: specify the credentials for the Storage Account as you did for the persistence.xml;
 	
 At this point the application should be correctly configured for the deploy.
 
@@ -172,12 +172,12 @@ At this aim, from eclipse just double click on the application project and "Wind
 Since Windows Azure doesn't have the runtime environment to support the execution of java code, we need to upload to the cloud
 also a JDK and a Java Application Server using improperly a IaaS as a PaaS platform. So you need to specify
 
-	-a name for you Windows Azure Deployment Project and click next;
-	-a pointer to your local Glassfish 4 installation (or to another supported Application Server) and go to the next tab;
-	-a pointer to your JDK (remember that you need JDK 1.7 in order to deploy MiC) and go to the next tab;
-	-the war file of the application you want to deploy (mic-frontend.war, it should already been specified) and click next;
-	-some additional and optional feature to enable; since MiC use the memecached service just enable the "Caching";
-	-click Finish;
+	- a name for you Windows Azure Deployment Project and click next;
+	- a pointer to your local Glassfish 4 installation (or to another supported Application Server) and go to the next tab;
+	- a pointer to your JDK (remember that you need JDK 1.7 in order to deploy MiC) and go to the next tab;
+	- the war file of the application you want to deploy (mic-frontend.war, it should already been specified) and click next;
+	- some additional and optional feature to enable; since MiC use the memecached service just enable the "Caching";
+	- click Finish;
 
 At this point eclipse and the Windows Azure plugin for Eclipse will create a new Windows Azure Deployment Project as you can see in the Eclipse Project Explorer.
 Finally you just need to double click on the new created project and "Windows Azure->Deploy to Windows Azure Cloud". The deployment process will start. As we explain in the next section, actually there are some problems in the deployment process due to the eclipse plugin for Windows Azure.
