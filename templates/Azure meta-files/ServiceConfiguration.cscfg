@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<ServiceConfiguration xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="2" osVersion="*" serviceName="WindowsAzureDeploymentProject"> 
+	<Role name="WorkerRole1">
+		<Instances count="1"/> 
+		<ConfigurationSettings>
+			<Setting name="Microsoft.WindowsAzure.Plugins.Caching.NamedCaches" value=""/> 
+			<Setting name="Microsoft.WindowsAzure.Plugins.Caching.Loglevel" value=""/> 
+			<Setting name="Microsoft.WindowsAzure.Plugins.Caching.CacheSizePercentage" value="30"/>
+			<Setting name="Microsoft.WindowsAzure.Plugins.Caching.ConfigStoreConnectionString" value="DefaultEndpointsProtocol=https;AccountName=YOURSTORAGEACCOUNT;AccountKey=YOURSTORAGEACCOUNTKEY"/>
+		</ConfigurationSettings>
+	</Role>
+</ServiceConfiguration>

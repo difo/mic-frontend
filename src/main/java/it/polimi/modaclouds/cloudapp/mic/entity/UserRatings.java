@@ -21,15 +21,12 @@ package it.polimi.modaclouds.cloudapp.mic.entity;
 
 
 import java.io.Serializable;
-
 import java.util.List;
 
-
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
-
 import javax.persistence.Id;
-
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
@@ -54,7 +51,7 @@ public class UserRatings implements Serializable{
 	
 	private String topicName;
 
-	
+	//@Embedded
 	private List<String> ratings;
 	
 	

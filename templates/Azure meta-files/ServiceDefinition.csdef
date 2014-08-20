@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<ServiceDefinition xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" name="WindowsAzureDeploymentProject"> 
+	<WorkerRole name="WorkerRole1" vmsize="Small">
+		<Startup>
+			<Task commandLine="util/.start.cmd.startup.cmd" executionContext="elevated" taskType="simple"/>
+		</Startup>
+		<Runtime executionContext="elevated">
+			<EntryPoint>
+				<ProgramEntryPoint commandLine="run.cmd" setReadyOnProcessStart="true"/>
+			 </EntryPoint>
+		</Runtime> 
+		<Imports>
+			<Import moduleName="Caching"/> 
+		</Imports>
+		<LocalResources>
+			<LocalStorage cleanOnRoleRecycle="false" name="Microsoft.WindowsAzure.Plugins.Caching.FileStore" sizeInMB="1000"/>
+		</LocalResources> 
+		<Endpoints>
+			<InputEndpoint localPort="8080" name="http" port="80" protocol="tcp"/>
+			<InternalEndpoint name="MEMCACHEDENDPOINT" port="11211" protocol="tcp"/>
+		</Endpoints>
+	</WorkerRole>
+</ServiceDefinition>
