@@ -42,6 +42,17 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
+    
+    <repositories>
+		<repository>
+			<id>deib-polimi-releases</id>
+			<url>https://github.com/deib-polimi/deib-polimi-mvn-repo/raw/master/releases</url>
+		</repository>
+		<repository>
+			<id>deib-polimi-snapshots</id>
+			<url>https://github.com/deib-polimi/deib-polimi-mvn-repo/raw/master/snapshots</url>
+		</repository>
+	</repositories>
 
     <dependencies>
         <dependency>
