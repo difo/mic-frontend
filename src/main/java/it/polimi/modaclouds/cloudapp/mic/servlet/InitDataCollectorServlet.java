@@ -16,16 +16,14 @@ public class InitDataCollectorServlet implements ServletContextListener {
 
 	@Override
 	public void contextDestroyed(ServletContextEvent arg0) {
-		// TODO Auto-generated method stub
-
+		AppDataCollectorFactory.getInstance().stopSyncingWithKB();
 	}
 
 	@Override
 	public void contextInitialized(ServletContextEvent arg0) {
 		try {
-			AppDataCollectorFactory.initialize(FakeServlet.class.getPackage()
-					.getName());
-			AppDataCollectorFactory.getInstance().start();
+			AppDataCollectorFactory.initialize("it.polimi.modaclouds.monitoring.dcfactory.kbconnectors");
+			AppDataCollectorFactory.getInstance().startSyncingWithKB();
 		} catch (ConfigurationException e) {
 			logger.error("Failed to start application level data collector", e);
 		}
