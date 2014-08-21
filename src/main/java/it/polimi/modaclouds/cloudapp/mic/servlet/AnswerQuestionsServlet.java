@@ -21,37 +21,28 @@ package it.polimi.modaclouds.cloudapp.mic.servlet;
 
 
 import it.polimi.modaclouds.cloudapp.mic.entity.UserRatings;
-
 import it.polimi.modaclouds.cpimlibrary.entitymng.CloudEntityManager;
-
 import it.polimi.modaclouds.cpimlibrary.memcache.CloudMemcache;
-
 import it.polimi.modaclouds.cpimlibrary.mffactory.MF;
 
 
 
+import it.polimi.modaclouds.monitoring.appleveldc.Monitor;
+
 import java.io.IOException;
-
 import java.sql.Connection;
-
 import java.sql.SQLException;
-
 import java.sql.Statement;
-
 import java.util.ArrayList;
-
 import java.util.List;
 
 
 
+
 import javax.servlet.RequestDispatcher;
-
 import javax.servlet.ServletException;
-
 import javax.servlet.http.HttpServlet;
-
 import javax.servlet.http.HttpServletRequest;
-
 import javax.servlet.http.HttpServletResponse;
 
 
@@ -107,7 +98,7 @@ public class AnswerQuestionsServlet extends HttpServlet {
 	 *      response)
 
 	 */
-
+	@Monitor(name = "answerQuestions")
 	protected void doPost(HttpServletRequest request,
 
 			HttpServletResponse response) throws ServletException, IOException {

@@ -24,44 +24,33 @@ import it.polimi.modaclouds.cpimlibrary.mffactory.MF;
 
 
 
+import it.polimi.modaclouds.monitoring.appleveldc.Monitor;
+
 import java.io.IOException;
-
 import java.io.InputStream;
-
 import java.io.UnsupportedEncodingException;
-
 import java.sql.Connection;
-
 import java.sql.SQLException;
-
 import java.sql.Statement;
-
 import java.util.HashMap;
 
 
 
+
 import javax.servlet.RequestDispatcher;
-
 import javax.servlet.ServletException;
-
 import javax.servlet.http.HttpServlet;
-
 import javax.servlet.http.HttpServletRequest;
-
 import javax.servlet.http.HttpServletResponse;
 
 
 
+
 import org.apache.commons.fileupload.FileItemIterator;
-
 import org.apache.commons.fileupload.FileItemStream;
-
 import org.apache.commons.fileupload.FileUploadException;
-
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
-
 import org.apache.commons.fileupload.util.Streams;
-
 import org.apache.commons.io.IOUtils;
 
 
@@ -117,7 +106,7 @@ public class RegisterServlet extends HttpServlet {
 	 *      response)
 
 	 */
-
+	@Monitor(name = "register")
 	protected void doPost(HttpServletRequest request,
 
 			HttpServletResponse response) throws ServletException, IOException {

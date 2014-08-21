@@ -58,7 +58,7 @@
         <dependency>
             <groupId>it.polimi.modaclouds.monitoring</groupId>
             <artifactId>app-level-dc</artifactId>
-            <version>1.0</version>
+            <version>0.3-SNAPSHOT</version>
         </dependency>
 
     </dependencies>
