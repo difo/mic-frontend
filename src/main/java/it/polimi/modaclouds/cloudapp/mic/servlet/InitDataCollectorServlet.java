@@ -22,7 +22,7 @@ public class InitDataCollectorServlet implements ServletContextListener {
 	@Override
 	public void contextInitialized(ServletContextEvent arg0) {
 		try {
-			AppDataCollectorFactory.initialize("it.polimi.modaclouds.monitoring.dcfactory.kbconnectors");
+			AppDataCollectorFactory.initialize("it.polimi.modaclouds.cloudapp.mic.servlet");
 			AppDataCollectorFactory.getInstance().startSyncingWithKB();
 		} catch (ConfigurationException e) {
 			logger.error("Failed to start application level data collector", e);
