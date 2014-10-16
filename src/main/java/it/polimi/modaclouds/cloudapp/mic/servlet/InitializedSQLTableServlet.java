@@ -16,14 +16,7 @@
  */
 package it.polimi.modaclouds.cloudapp.mic.servlet;
 
-
-
-
-
 import it.polimi.modaclouds.cpimlibrary.mffactory.MF;
-
-
-
 
 import java.io.IOException;
 
@@ -32,8 +25,6 @@ import java.sql.Connection;
 import java.sql.Statement;
 
 import java.util.logging.Logger;
-
-
 
 import javax.servlet.RequestDispatcher;
 
@@ -45,24 +36,18 @@ import javax.servlet.http.HttpServletRequest;
 
 import javax.servlet.http.HttpServletResponse;
 
-
-
 /**
-
+ * 
  * Servlet implementation class LoginServlet
-
  */
 
 public class InitializedSQLTableServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 5909797442154638761L;
 
-
-
 	/**
-
+	 * 
 	 * @see HttpServlet#HttpServlet()
-
 	 */
 
 	public InitializedSQLTableServlet() {
@@ -71,63 +56,53 @@ public class InitializedSQLTableServlet extends HttpServlet {
 
 	}
 
-
-
 	/**
-
+	 * 
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
-
 	 *      response)
-
 	 */
 
 	protected void doGet(HttpServletRequest request,
 
-			HttpServletResponse response) throws ServletException, IOException {
+	HttpServletResponse response) throws ServletException, IOException {
 
 		this.doPost(request, response);
 
 	}
 
-
-
 	/**
-
+	 * 
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-
 	 *      response)
-
 	 */
 
 	protected void doPost(HttpServletRequest request,
 
-			HttpServletResponse response) throws ServletException, IOException {
+	HttpServletResponse response) throws ServletException, IOException {
 
-		MF mf=MF.getFactory();
+		MF mf = MF.getFactory();
 
-		Logger l=Logger.getLogger("it.polimi.modaclouds.cloudapp");
+		Logger l = Logger.getLogger("it.polimi.modaclouds.cloudapp");
 
 		request.setCharacterEncoding("UTF-8");
 
 		response.setCharacterEncoding("UTF-8");
 
-		Connection c=mf.getSQLService().getConnection();
+		Connection c = mf.getSQLService().getConnection();
 
 		String stm = "CREATE TABLE UserProfile (Email VARCHAR(255) NOT NULL, Password VARCHAR(255) NOT NULL, FirstName VARCHAR(255), LastName VARCHAR(255), Date_of_birth DATE, Gender CHAR(1) NOT NULL, Picture VARCHAR(255), PRIMARY KEY(Email))";
 
-		String stm2= "CREATE TABLE UserSimilarity (Email VARCHAR(255) NOT NULL, Topic VARCHAR(255) NOT NULL, FirstUser VARCHAR(255), SecondUser VARCHAR(255), ThirdUser VARCHAR(255), CONSTRAINT simID PRIMARY KEY (Email,Topic), FOREIGN KEY (FirstUser) REFERENCES UserProfile(Email), FOREIGN KEY (SecondUser) REFERENCES UserProfile(Email), FOREIGN KEY (ThirdUser) REFERENCES UserProfile(Email))";
+		String stm2 = "CREATE TABLE UserSimilarity (Email VARCHAR(255) NOT NULL, Topic VARCHAR(255) NOT NULL, FirstUser VARCHAR(255), SecondUser VARCHAR(255), ThirdUser VARCHAR(255), CONSTRAINT simID PRIMARY KEY (Email,Topic), FOREIGN KEY (FirstUser) REFERENCES UserProfile(Email), FOREIGN KEY (SecondUser) REFERENCES UserProfile(Email), FOREIGN KEY (ThirdUser) REFERENCES UserProfile(Email))";
 
-		String stm3= "CREATE TABLE Message (Id VARCHAR(255) NOT NULL, UserId VARCHAR(255) NOT NULL, Date DATE, MessageTxt TEXT, Topic VARCHAR(255), PRIMARY KEY(Id), FOREIGN KEY (UserId) REFERENCES UserProfile(Email))";
+		String stm3 = "CREATE TABLE Message (Id VARCHAR(255) NOT NULL, UserId VARCHAR(255) NOT NULL, Date DATE, MessageTxt TEXT, Topic VARCHAR(255), PRIMARY KEY(Id), FOREIGN KEY (UserId) REFERENCES UserProfile(Email))";
 
-		if(c==null)
+		if (c == null)
 
 			l.info("CONNECTION TO DB FAILED");
 
 		Statement statement;
 
 		try {
-
-		
 
 			statement = c.createStatement();
 
@@ -137,25 +112,17 @@ public class InitializedSQLTableServlet extends HttpServlet {
 
 			statement.executeUpdate(stm3);
 
-			
-
 			statement.close();
 
 			c.close();
 
-			
-
 		} catch (Exception e) {
-
-			
 
 			l.info("ERROR CREATING CONNECTION TO DB");
 
-			l.info("PRINTSTACKTRACE:"+e.getMessage());
+			l.info("PRINTSTACKTRACE:" + e.getMessage());
 
 		}
-
-		
 
 		request.setAttribute("message", "SQL Table initialized...");
 
@@ -163,15 +130,8 @@ public class InitializedSQLTableServlet extends HttpServlet {
 
 		disp = request.getRequestDispatcher("Home.jsp");
 
-			disp.forward(request, response);
-
-		
-
-
+		disp.forward(request, response);
 
 	}
 
-
-
 }
-
